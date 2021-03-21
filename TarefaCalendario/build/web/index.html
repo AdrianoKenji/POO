@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Calendário</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Tarefa Calendário</h1>
+        <p><b>Nome:</b> Adriano Kenji Koyama Augusto</p>
+        <p><b>RA:</b>1290481922029</p>
+        <hr>
+        
+        <h2>Calendário</h2>
+        
+        <form action="calendario.jsp" method="POST">
+            <label>Mês:</label><br>
+            <select name="mes">
+                <option value="Janeiro" selected>Janeiro</option>
+                <option value="Fevereiro">Fevereiro</option>
+                <option value="Março">Março</option>
+                <option value="Abril">Abril</option>
+                <option value="Maio">Maio</option>
+                <option value="Junho">Junho</option>
+                <option value="Julho">Julho</option>
+                <option value="Agosto">Agosto</option>
+                <option value="Setembro">Setembro</option>
+                <option value="Outubro">Outubro</option>
+                <option value="Novembro">Novembro</option>
+                <option value="Dezembro">Dezembro</option>
+            </select>
+            <br><label>Ano:</label><br>
+            <input type="number" name="ano" placeholder="Digite um Ano"><br>
+            <br><input type="submit" name="enviar" value="Enviar">
+        </form>
+    </body>
+</html>

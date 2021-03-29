@@ -1,0 +1,13 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<style>
+    body {
+        text-align: center;
+    }
+    table {
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+<b><a href="index.jsp">Página Inicial</a></b> |
+<a href="tabela-price.jsp">Tabela-Price</a> 

@@ -1,0 +1,52 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<style>
+    body {
+        background-color: whitesmoke;
+        font-family: 'Open Sans';
+        text-align: center;
+    }
+    
+    main {
+        background-color: white;
+        box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.59);
+        display: block;
+        border: 1px solid black;
+        left: 40%;
+        top: 50%;
+        margin: auto;
+        width: 600px;
+        border-radius: 5px;
+    }   
+</style>
+
+<% 
+    if(request.getParameter("session.username") != null) {
+        session.setAttribute("session.username", request.getParameter("session.username"));
+        response.sendRedirect(request.getRequestURI());
+    } else if(request.getParameter("session.logout") != null) {
+        session.removeAttribute("session.username");
+        response.sendRedirect(request.getRequestURI());
+    }
+%>
+
+<% if(session.getAttribute("session.username") != null) { %>
+    <form>
+        <a href="index.jsp">Home</a> |
+        <a href="page1.jsp">Identificação Aluno</a> <br>
+        
+        <p>Bem vindo, <b><%= session.getAttribute("session.username") %></b></p>
+        <input type="submit" name="session.logout" value="Logout"/>
+    </form>
+<% } else { %>
+    <form>
+        Username: <input type="text" name="session.username"/>
+        <input type="submit" name="session;.login" value="Login"/>
+     </form>
+<% } %>
+<br>
+
+
+
+
+
